@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title> HOTEL </title>
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un documento HTML5">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="misestilos.css">
+    <script type="text/javascript" src="js/misFuncionesRoom.js"></script>
+</head>
+
+<body>
+<header id="cabeceralogo">
+    <div>
+        <h1>HOTEL </h1>
+    </div>
+</header>
+<nav id="menuprincipal">
+    <div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Reportes.html">Reportes</a></li>
+            <li><a href="Categorias.html">Categorias</a></li>
+            <li><a href="Clientes.html">Clientes</a></li>
+            <li><a href="Reservaciones.html">Reservaciones</a></li>
+            <li><a href="Room.html">Hotel</a></li>
+        </ul>
+    </div>
+</nav>
+
+<label>NAME:</label>
+<input class="controlRoom" type="text" id="name2" placeholder="escribe el nombre" ><br>
+<label>HOTEL:</label>
+<input class="controlRoom" type="text" id="brand" placeholder="escribe el hotel " ><br>
+<label>STARS:</label>
+<input class="controlRoom" type="number" id="year" placeholder="cantidad de estrellas"><br>
+<label>DESCRIPTION:</label>
+<input class="controlRoom" type="text" id="description2" placeholder="Descripcion del cuarto" ><br>
+<select id="select-category"></select>
+<script type="text/javascript">
+    window.onload = autoInicioCategoria();
+</script>
+
+<div id="miListaRoom"></div>
+<button onclick="traerInformacionRoom()" > Consultar Room</button>
+
+<button onclick="agregarRoom()">Guardar Room</button>
+
+<style>
+    table {
+        width: 100%;
+        border: 1px solid rgba(117, 189, 180, 0.86);
+    }
+    th, td {
+        width: 0%;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid rgba(117, 189, 180, 0.86);
+        border-collapse: collapse;
+        padding: 0.0em;
+        caption-side: bottom;
+    }
+    caption {
+        padding: 0.0em;
+    }
+    button{
+        position: relative;
+        top:8px;
+        bottom: 8px;
+        right: 8px;
+        left: 8px;
+        border: 1px solid rgba(72, 60, 60, 0.1);
+        margin-bottom: 10px;
+        padding: 1px;
+        width: 150px;
+        font-family: 'Poppins',sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #ffffff;
+        background-size:300%;
+        background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0.86));
+    }
+    input{
+        position: relative;
+        top:8px;
+        bottom: 8px;
+        right: 8px;
+        left: 8px;
+        border: 1px solid rgba(72, 60, 60, 0.1);
+        margin-bottom: 10px;
+        padding: 1px;
+        width: 150px;
+        font-family: 'Poppins',sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #000000;
+        background-size:300%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.91), rgba(160, 180, 178, 0.86));
+
+    }
+    label{
+        position: relative;
+        top:8px;
+        bottom: 8px;
+        right: 8px;
+        left: 8px;
+        border: 1px solid rgba(72, 60, 60, 0.1);
+        margin-bottom: 10px;
+        padding: 1px;
+        width: 150px;
+        font-family: 'Poppins',sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #000000;
+        background-size:300%;
+        background-image: linear-gradient(rgba(72, 130, 223, 0.91), rgba(255, 255, 255, 0.91));
+
+    }
+    select {
+        position: relative;
+        top:8px;
+        bottom: 8px;
+        right: 8px;
+        left: 8px;
+        border: 1px solid rgba(72, 60, 60, 0.1);
+        margin-bottom: 10px;
+        padding: 1px;
+        width: 150px;
+        font-family: 'Poppins',sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #000000;
+        background-size:300%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.91), rgba(160, 180, 178, 0.86));
+    }
+    table{
+   border-collapse: separate;
+   border-spacing: 5px;
+   background: #000 url("gradient.gif") bottom left repeat-x;
+   color: #fff;
+    }
+
+</style>
+
+</body>
+</html>
+
